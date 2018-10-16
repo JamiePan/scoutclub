@@ -1,0 +1,65 @@
+﻿<link href="~/Content/stylesheet.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../Content/women.jpg');
+            background-position: center;
+        }
+
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #b03c3c;
+            font-family: Lucida Handwriting;
+            font-size: 80px;
+        }
+
+        p {
+            font-family: Times New Roman;
+            font-size: 30px;
+            color: white;
+        }
+
+        .hero-text button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 10px 25px;
+            color: black;
+            background-color: #ddd;
+            text-align: center;
+            cursor: pointer;
+            font-family: Times New Roman;
+            font-size: 15px;
+        }
+
+            .hero-text button:hover {
+                background-color: #555;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="body">
+        <div class="hero-text">
+            <h1 style="font-size:75px">GirlsScout Club</h1>
+            <p>Girls Love Lifes!</p>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <button>@Html.ActionLink("Check Activity", "Index", "Activities")</button>
+                <button>@Html.ActionLink("Check Staff", "Index", "Staffs")</button>
+                <button>@Html.ActionLink("Check Class", "Index", "ClassArrangements")</button>
+                <button>@Html.ActionLink("Events", "Index", "Calendar")</button>
+            }
+        </div>
+    </div>
+</body>
+</html>
+

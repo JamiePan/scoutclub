@@ -1,0 +1,140 @@
+﻿
+<link href="~/Content/stylesheet.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset='utf-8' />
+    <title>Map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+        body {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #map {
+            position: absolute;
+            top: 10px;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+   
+    <style>
+        table, th, td {
+            margin: 5px 0px 0px 0px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+
+        table#t01 {
+            width: 100%;
+            background-color: #a59696;
+        }
+
+        h2 {
+            margin: 650px 0px 0px 0px;
+            color: #f07447;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <h2>Office Location</h2>
+
+    <table id="t01">
+        <tr>
+            <th>1</th>
+            <th>Monash University, Caulfield Campus</th>
+            <th>900 Dandenong Rd, Caulfield East VIC 3145</th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <th>Monash University, Clayton Campus</th>
+            <th>Wellington Rd, Clayton VIC 3800</th>
+        </tr>
+    </table>
+
+
+    <style>
+        #marker {
+            background-image: url('../../Content/marker.png');
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .mapboxgl-popup {
+            max-width: 200px;
+        }
+    </style>
+
+    <div id='map' style='width: 1300px; height: 660px;'></div>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.3/mapbox-gl-directions.css' type='text/css' />
+
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiamFtaWVtYXBib3giLCJhIjoiY2puNW4zdWpoMDkyZjN3bzBtZWN6ZTFoZyJ9.nRIfOnh8TkNBr_gi0wQNgw';
+        var monument1 = [145.1350, -37.9117];
+        var map1 = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v9',
+            center: monument1,
+            zoom: 10
+        });
+
+        // create a traffic navigation window
+        map1.addControl(new MapboxDirections({
+            accessToken: mapboxgl.accessToken
+        }), 'bottom-left');
+
+        // create the popup
+        var popup1 = new mapboxgl.Popup({ offset: 20 })
+            .setText('Monash University, Clayton Campus. Address: Wellington Rd, Clayton VIC 3800');
+
+        // create DOM element for the marker
+        var el1 = document.createElement('div');
+        el1.id = 'marker';
+
+        // create the marker
+        new mapboxgl.Marker(el1)
+            .setLngLat(monument1)
+            .setPopup(popup1) // sets a popup on this marker
+            .addTo(map1);
+
+        var monument2 = [145.0451, -37.8771];
+
+
+        // create the popup
+        var popup2 = new mapboxgl.Popup({ offset: 20 })
+            .setText('Monash University, Caulfield Campus. Address: 900 Princes Hwy Service Rd, Caulfield East VIC 3145 ');
+
+        // create DOM element for the marker
+        var el2 = document.createElement('div');
+        el2.id = 'marker';
+
+        // create the marker
+        new mapboxgl.Marker(el2)
+            .setLngLat(monument2)
+            .setPopup(popup2) // sets a popup on this marker
+            .addTo(map1);
+    </script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="C_LevelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Activity">
+    <Key>
+      <PropertyRef Name="ActivityID" />
+    </Key>
+    <Property Name="ActivityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddressID" Type="Int32" />
+    <NavigationProperty Name="ClassArrangements" Relationship="Self.FK_dbo_ClassArrangement_dbo_Activity_ActivityID" FromRole="Activity" ToRole="ClassArrangement" />
+  </EntityType>
+  <EntityType Name="ClassArrangement">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ClassID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Available" Type="Int32" />
+    <Property Name="ActivityID" Type="Int32" Nullable="false" />
+    <Property Name="StaffID" Type="Int32" Nullable="false" />
+    <Property Name="Id" Type="Int32" />
+    <NavigationProperty Name="Activity" Relationship="Self.FK_dbo_ClassArrangement_dbo_Activity_ActivityID" FromRole="ClassArrangement" ToRole="Activity" />
+    <NavigationProperty Name="Client" Relationship="Self.FK_dbo_ClassArrangement_dbo_Client_Id" FromRole="ClassArrangement" ToRole="Client" />
+    <NavigationProperty Name="Staff" Relationship="Self.FK_dbo_ClassArrangement_dbo_Staff_StaffID" FromRole="ClassArrangement" ToRole="Staff" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ClassArrangements" Relationship="Self.FK_dbo_ClassArrangement_dbo_Client_Id" FromRole="Client" ToRole="ClassArrangement" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="StaffID" />
+    </Key>
+    <Property Name="StaffID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ClassArrangements" Relationship="Self.FK_dbo_ClassArrangement_dbo_Staff_StaffID" FromRole="Staff" ToRole="ClassArrangement" />
+  </EntityType>
+  <Association Name="FK_dbo_ClassArrangement_dbo_Activity_ActivityID">
+    <End Role="Activity" Type="Self.Activity" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ClassArrangement" Type="Self.ClassArrangement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activity">
+        <PropertyRef Name="ActivityID" />
+      </Principal>
+      <Dependent Role="ClassArrangement">
+        <PropertyRef Name="ActivityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ClassArrangement_dbo_Client_Id">
+    <End Role="Client" Type="Self.Client" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ClassArrangement" Type="Self.ClassArrangement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClassArrangement">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ClassArrangement_dbo_Staff_StaffID">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ClassArrangement" Type="Self.ClassArrangement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="StaffID" />
+      </Principal>
+      <Dependent Role="ClassArrangement">
+        <PropertyRef Name="StaffID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="C_LevelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Activities" EntityType="Self.Activity" />
+    <EntitySet Name="ClassArrangements" EntityType="Self.ClassArrangement" />
+    <EntitySet Name="Clients" EntityType="Self.Client" />
+    <EntitySet Name="Staffs" EntityType="Self.Staff" />
+    <AssociationSet Name="FK_dbo_ClassArrangement_dbo_Activity_ActivityID" Association="Self.FK_dbo_ClassArrangement_dbo_Activity_ActivityID">
+      <End Role="Activity" EntitySet="Activities" />
+      <End Role="ClassArrangement" EntitySet="ClassArrangements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ClassArrangement_dbo_Client_Id" Association="Self.FK_dbo_ClassArrangement_dbo_Client_Id">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="ClassArrangement" EntitySet="ClassArrangements" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ClassArrangement_dbo_Staff_StaffID" Association="Self.FK_dbo_ClassArrangement_dbo_Staff_StaffID">
+      <End Role="Staff" EntitySet="Staffs" />
+      <End Role="ClassArrangement" EntitySet="ClassArrangements" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
