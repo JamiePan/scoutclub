@@ -26,6 +26,6 @@ Only registered users, staff, admin can access the sensitive information of the 
 </br></br>
 <h5>Authentication and Security</h5>
 <img src="https://user-images.githubusercontent.com/44200835/67095200-14d67980-f201-11e9-827e-4429b389b3d8.png" width="600" height="36">
-<img src="https://user-images.githubusercontent.com/44200835/67095210-1bfd8780-f201-11e9-836d-71ad65356d73.png">
-<img src="https://user-images.githubusercontent.com/44200835/67095213-1e5fe180-f201-11e9-888a-018f14361962.png">
+<img src="https://user-images.githubusercontent.com/44200835/67095210-1bfd8780-f201-11e9-836d-71ad65356d73.png" width="600" height="36">
+<img src="https://user-images.githubusercontent.com/44200835/67095213-1e5fe180-f201-11e9-888a-018f14361962.png" width="600" height="36">
 
