@@ -20,4 +20,4 @@ Only registered users, staff, admin can access the sensitive information of the 
 
 
 <h5>Entity Relationship Diagram: </h5>
-<img src="https://user-images.githubusercontent.com/44200835/67093223-dd65ce00-f1fc-11e9-8577-150a58bee269.png" width="500" height="350">
+<img src="https://user-images.githubusercontent.com/44200835/67093223-dd65ce00-f1fc-11e9-8577-150a58bee269.png" width="550" height="400">
