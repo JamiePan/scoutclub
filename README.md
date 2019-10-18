@@ -16,6 +16,5 @@ Only registered users, staff, admin can access the sensitive information of the 
 <img src="https://user-images.githubusercontent.com/44200835/67093730-0470cf80-f1fe-11e9-9149-708a4040ca1a.png">
 
 
-
-**Entity Relationship Diagram :**
+<h5>Entity Relationship Diagram: </h5>
 <img src="https://user-images.githubusercontent.com/44200835/67093223-dd65ce00-f1fc-11e9-8577-150a58bee269.png" width="600" height="350">
