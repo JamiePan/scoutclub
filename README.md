@@ -10,7 +10,8 @@ The Idea was inspired from the need of managing the events among group of commun
 
 ![homepage](https://user-images.githubusercontent.com/44200835/67092840-00dc4900-f1fc-11e9-9469-466f0a21574b.png)
 
-![Functional Diagram](https://user-images.githubusercontent.com/44200835/67092849-05a0fd00-f1fc-11e9-99fb-eb1c820e2f96.png)
+![image](https://user-images.githubusercontent.com/44200835/67093223-dd65ce00-f1fc-11e9-8577-150a58bee269.png)
+
 
 
 
