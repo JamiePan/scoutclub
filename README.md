@@ -26,4 +26,4 @@ Only registered users, staff, admin can access the sensitive information of the 
 <h5>SQL file:</h5>
 <img src="https://user-images.githubusercontent.com/44200835/67094359-6ed63f80-f1ff-11e9-9675-2a74d5496a50.png">
 <h5>CS file:</h5>
-<img src="https://user-images.githubusercontent.com/44200835/67094364-71d13000-f1ff-11e9-9f77-9c094d3d9610.png" width="350" height="80">
+<img src="https://user-images.githubusercontent.com/44200835/67094364-71d13000-f1ff-11e9-9f77-9c094d3d9610.png" width="350" height="70">
