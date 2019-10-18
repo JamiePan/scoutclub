@@ -8,13 +8,9 @@ The Idea was inspired from the need of managing the events among group of commun
 - [x] Map navigation, Markers:They are offered to the clients and admin, and admin can modify the markers of company locations.
 - [x] Authentication and Security: Only registered users, staff, admin can access the sensitive information of the website, including ‘Contact’, ‘Map’, ‘events (Calendar)’, ‘Staff List’, ‘Class List’, ‘Activities List’. 
 
-**HomePage:**
 ![homepage](https://user-images.githubusercontent.com/44200835/67092840-00dc4900-f1fc-11e9-9469-466f0a21574b.png)
 
-
-**Functional diagram:**
 ![Functional Diagram](https://user-images.githubusercontent.com/44200835/67092849-05a0fd00-f1fc-11e9-99fb-eb1c820e2f96.png)
 
 
-**ERD:**
-![ERD](https://user-images.githubusercontent.com/44200835/67092846-033ea300-f1fc-11e9-895f-b6a7285e2318.png)
+
