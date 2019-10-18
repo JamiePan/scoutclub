@@ -23,7 +23,8 @@ Only registered users, staff, admin can access the sensitive information of the 
 <img src="https://user-images.githubusercontent.com/44200835/67093223-dd65ce00-f1fc-11e9-8577-150a58bee269.png" width="550" height="400">
 
 <h3>DbContext in EF</h3>
+<img src="https://user-images.githubusercontent.com/44200835/67094804-400c9900-f200-11e9-83f3-e5e90c5fb4b4.png">
 <h5>SQL file:</h5>
-<img src="https://user-images.githubusercontent.com/44200835/67094359-6ed63f80-f1ff-11e9-9675-2a74d5496a50.png">
+<img src="https://user-images.githubusercontent.com/44200835/67094359-6ed63f80-f1ff-11e9-9675-2a74d5496a50.png" width="370" height="70">
 <h5>CS file:</h5>
 <img src="https://user-images.githubusercontent.com/44200835/67094364-71d13000-f1ff-11e9-9f77-9c094d3d9610.png" width="370" height="70">
