@@ -11,20 +11,15 @@ These are in a Calendar can be used by both admin and clients, and the events ca
 They are offered to the clients and admin, and admin can modify the markers of company locations.
 - [x] Authentication and Security: 
 Only registered users, staff, admin can access the sensitive information of the website, including ‘Contact’, ‘Map’, ‘events (Calendar)’, ‘Staff List’, ‘Class List’, ‘Activities List’. 
-
-
-
+</br></br>
 <img src="https://user-images.githubusercontent.com/44200835/67093730-0470cf80-f1fe-11e9-9149-708a4040ca1a.png">
-
-
-
-
+</br></br>
 <h3>Entity Relationship Diagram: </h3>
 <img src="https://user-images.githubusercontent.com/44200835/67093223-dd65ce00-f1fc-11e9-8577-150a58bee269.png" width="550" height="400">
-
+</br></br>
 <h3>DbContext in EF</h3>
-<img src="https://user-images.githubusercontent.com/44200835/67094804-400c9900-f200-11e9-83f3-e5e90c5fb4b4.png" width="600" height="90">
+<img src="https://user-images.githubusercontent.com/44200835/67094804-400c9900-f200-11e9-83f3-e5e90c5fb4b4.png" width="600" height="80">
 <h5>SQL file:</h5>
-<img src="https://user-images.githubusercontent.com/44200835/67094359-6ed63f80-f1ff-11e9-9675-2a74d5496a50.png" width="340" height="90">
+<img src="https://user-images.githubusercontent.com/44200835/67094359-6ed63f80-f1ff-11e9-9675-2a74d5496a50.png" width="400" height="100">
 <h5>CS file:</h5>
 <img src="https://user-images.githubusercontent.com/44200835/67094364-71d13000-f1ff-11e9-9f77-9c094d3d9610.png" width="370" height="70">
