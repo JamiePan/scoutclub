@@ -9,9 +9,8 @@ The Idea was inspired from the need of managing the events among group of commun
 - [x] Authentication and Security: Only registered users, staff, admin can access the sensitive information of the website, including ‘Contact’, ‘Map’, ‘events (Calendar)’, ‘Staff List’, ‘Class List’, ‘Activities List’. 
 
 
-
-![homepage](https://user-images.githubusercontent.com/44200835/67092840-00dc4900-f1fc-11e9-9469-466f0a21574b.png)
-
+<img src="https://user-images.githubusercontent.com/44200835/67093730-0470cf80-f1fe-11e9-9149-708a4040ca1a.png">
 
 
-<img src="https://user-images.githubusercontent.com/44200835/67093223-dd65ce00-f1fc-11e9-8577-150a58bee269.png" width="600" height="600">
+
+<img src="https://user-images.githubusercontent.com/44200835/67093223-dd65ce00-f1fc-11e9-8577-150a58bee269.png" width="600" height="400">
